@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="WebDopog:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/WebDopog_war</output-path>
+    <root id="archive" name="WebDopog_war.war">
+      <element id="artifact" artifact-name="WebDopog:war exploded" />
+    </root>
+  </artifact>
+</component>
