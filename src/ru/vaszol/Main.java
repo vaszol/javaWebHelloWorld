@@ -5,6 +5,6 @@ package ru.vaszol;
  */
 public class Main {
     public static String test(){
-        return "This is the test!";
+        return "тест захвата видео в HTML5";
     }
 }

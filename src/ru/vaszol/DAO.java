@@ -13,15 +13,6 @@ public class DAO {
         return DriverManager.getConnection("jdbc:mysql://localhost:3306/webdopog", "donkey", "123");
     }
 
-
-//    static List<Post> posts;
-//    static {
-//        posts = new ArrayList<Post>();
-//        posts.add(new Post(1,"hello"));
-//        posts.add(new Post(2,"world"));
-//        posts.add(new Post(3,"people"));
-//    }
-
     public static List<Post> getPosts() throws SQLException, ClassNotFoundException {
         try (Connection c = getConnection();
              PreparedStatement ps = c.prepareStatement("SELECT id,text from posts");
@@ -36,13 +27,8 @@ public class DAO {
 
             return posts;
         }
-
-//        return posts;
     }
 
-//    public static void main(String[] args) throws SQLException, ClassNotFoundException {
-//        System.out.println(getPosts());
-//    }
 
     public static void deletePost(int id) throws SQLException, ClassNotFoundException {
         try (Connection c = getConnection();
@@ -51,15 +37,6 @@ public class DAO {
             ps.setInt(1,id);
             ps.executeUpdate();
         }
-//        Post d = null;
-//        for(Post p :posts){
-//            if(p.id == id){
-//                d=p;
-//            }
-//        }
-//        if (d!=null){
-//            posts.remove(d);
-//        }
     }
 
     public static void addPost(String text) throws SQLException, ClassNotFoundException {
@@ -69,7 +46,6 @@ public class DAO {
             ps.setString(1,text);
             ps.executeUpdate();
         }
-//        posts.add(new Post(posts.size()+1,text));
     }
 
 }

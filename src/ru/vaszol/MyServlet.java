@@ -21,7 +21,5 @@ public class MyServlet extends javax.servlet.http.HttpServlet {
             e.printStackTrace();
         }
         request.getRequestDispatcher("WEB-INF/posts.jsp").forward(request,response); //редиректим на jsp страницу наш запрос
-//        int id = Integer.parseInt(request.getParameter("id"));
-//        response.getOutputStream().write(("ID is " + id + "").getBytes());
     }
 }
