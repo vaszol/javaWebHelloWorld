@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Wacom Javascript API </title>
+</head>
+<body style="margin:0; padding: 0;">
+<canvas id="main" width="500" height="500" ></canvas>
+<embed name="wacom-plugin" id="wacom-plugin"
+       type="application/x-wacomtabletplugin" HIDDEN="TRUE"></embed>
+<script type="text/javascript">
+    //по загрузке страницы подключаем скрипт wacom.js
+    window.onload = function() {
+        var el = document.createElement("script");
+        el.type = "text/javascript";
+        el.src = "wacom.js?"+Math.random();
+        document.getElementsByTagName("head")[0].appendChild(el);
+    }
+</script>
+</body>
+</html>

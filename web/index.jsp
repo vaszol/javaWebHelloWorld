@@ -9,10 +9,9 @@
 	<title>WebDopog</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
-	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="css/video.css" rel="stylesheet" type="text/css">
-	<script src="js/video.js"></script>
-	<script src="js/wacom.js"></script>
+
 </head>
 
 <body>
@@ -42,11 +41,9 @@
 					<canvas id="canvas" width="320" height="240" ></canvas>
 					<input id="getCamera" type="button" value="Сфотографировать" />
 				</div>
-				<div class="item" id="sign">
+				<div class="it" id="sign">
 					<span> Подпись </span>
-					<canvas id="signatureCanvas" width="320" height="240"></canvas>
-					<embed name="wacom-plugin" id="wacom-plugin"
-						   type="application/x-wacomtabletplugin" HIDDEN="TRUE"></embed>
+					<canvas id="signatureCanvas" width="500" height="300" style.border="1px solid #ccc"></canvas>
 					<input id="getSign" type="button" value="подписать" />
 				</div>
 				</p>
@@ -63,15 +60,8 @@
 
 <footer class="footer">
 	<strong>Footer:</strong>
-</footer><!-- .footer -->
-<%--<script type="text/javascript">--%>
-	<%--//по загрузке страницы подключаем скрипт wacom.js--%>
-	<%--window.onload = function() {--%>
-		<%--var el = document.createElement("script");--%>
-		<%--el.type = "text/javascript";--%>
-		<%--el.src = "wacom.js?"+Math.random();--%>
-		<%--document.getElementsByTagName("head")[0].appendChild(el);--%>
-	<%--}--%>
-<%--</script>--%>
+
+<script src="js/video.js"></script>
+<script src="js/sign.js"></script>
 </body>
 </html>

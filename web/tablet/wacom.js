@@ -1,16 +1,6 @@
 /**
- * Created by vas on 28.10.2015.
+ * Created by vas on 29.10.2015.
  */
-/////////////////////////////
-//по загрузке страницы подключаем скрипт wacom.js
-//window.onload = function() {
-//    var el = document.createElement("script");
-//    el.type = "text/javascript";
-//    el.src = "wacom.js?"+Math.random();
-//    document.getElementsByTagName("head")[0].appendChild(el);
-//}
-///////////////////////////
-
 var plugin = document.getElementById("wacom-plugin"); //получаем плагин
 var canvas = document.getElementById("main"); //получаем элемент канваса
 var context = canvas.getContext("2d"); //получаем контекст для рисования
@@ -38,9 +28,10 @@ function onMouseMove(e) {
     if(!mousedown) return;
     if(plugin) { //проверяем, есть ли плагин планшета
         context.lineWidth = 25 * plugin.pressure; //делаем ширину кисти зависимую от силы нажатия
-    } else {
-        context.lineWidth = 25; //если человек рисует мышью и планшет не подключен
     }
+        // else {
+    //    context.lineWidth = 25; //если человек рисует мышью и планшет не подключен
+    //}
     context.beginPath(); //открываем путь
     context.moveTo(oldX, oldY); //двигаем к предыдущем координатам
     context.lineTo(e.pageX, e.pageY); //проводим линию к текущим
